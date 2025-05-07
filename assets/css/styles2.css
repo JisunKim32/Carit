@@ -1,0 +1,607 @@
+@import url("../css/reset.css");
+@import url("../css/nomalize.css");
+@import url("../css/common.css");
+
+
+.sec-01{
+   height: 936px;
+   position: relative;
+   background: #1A1A1A;
+   z-index: 999;
+   overflow: hidden;
+}
+
+/* .w-50{
+   margin: 0 auto;
+} */
+
+/* .frame{ -> 기존
+   width: 100%;
+   margin: 0 auto;
+} */
+
+.frame{
+   position: relative;
+}
+
+.d-flex{
+   display: flex;
+}
+
+.fluid{
+   width: 100%;
+   margin: 0 auto;
+   height: 876px;
+   margin: 0 auto;
+   position: relative;
+   overflow: hidden;
+}
+
+.ro--1::after{
+   content: "";
+   width: 517px;
+   height: 1600px;
+   transform: rotate(-150deg);
+   position: absolute;
+   top: -250px;
+   left: 4px;
+   background: rgb(2,0,36);
+   background: linear-gradient(0deg, rgba(13, 227, 97, 0.6) 0%, rgba(7, 125, 53, 0.6) 100%);
+   z-index: -1;
+}
+
+.ro--2::after{
+   content: "";
+   width: 258px;
+   height: 1600px;
+   transform: rotate(150deg);
+   position: absolute;
+   top: -290px;
+   left: 940px;
+   background: rgb(2,0,36);
+   background: linear-gradient(0deg, rgba(13, 227, 97, 0.3) 0%, rgba(7, 125, 53, 0.35) 100%);
+   box-shadow: -7px -2px 40px rgba(0, 0, 0, .2);
+   z-index: -1;
+}
+
+.ro--3::after{
+   content: "";
+   width: 167px;
+   height: 1600px;
+   transform: rotate(-150deg);
+   position: absolute;
+   top: -290px;
+   left: 1470px;
+   background: rgb(2,0,36);
+   background: linear-gradient(0deg, rgba(13, 227, 97, 0.18) 0%, rgba(7, 125, 53, 0.18) 100%);
+   box-shadow: -7px -2px 40px rgba(0, 0, 0, .2);
+   z-index: -1;
+}
+
+/* .main-car{
+   position: relative;
+}
+
+.main-car img{ 
+   position: absolute;
+   z-index: 2;
+   width: 100%;
+   top: 394px;
+   left: 976px;
+}
+
+.top-content{
+   width: 1251px;
+   height: 489px;
+   margin: 0 auto;
+}
+
+.top-title{
+   width: 100%;
+   width: 436px;
+   position: absolute;
+   top: 239px;
+   left: 393px;
+   z-index: 3;
+} */
+
+.main-car img{ 
+   position: absolute;
+   z-index: 2;
+   width: 668px;
+   top: 394px;
+   left: 976px;
+}
+
+.top-content{
+   width: 1251px;
+   margin: 0 auto;
+}
+
+.top-title{
+   width: 436px;
+   position: absolute;
+   top: 239px;
+   left: 393px;
+   z-index: 3;
+}
+
+ /* .top-title{
+   color: #fff;
+   max-width: 50%;
+ } */
+
+.top-title>h2{
+   margin-bottom: 30px;
+}
+
+.title_point{
+   color: #0DE361;
+   font-weight: 700;
+}
+
+.top-title-btn{
+   display: flex;
+   padding: 15px 30px;
+   background-color: transparent;
+   border: 1px solid #fff;
+   font-size: 18px;
+   color: #fff;
+   margin-top: 100px;
+   cursor: pointer;
+   transition: #0De361 0.3s;
+   align-items: center;
+}
+
+.more_info_icon{
+   color: #fff;
+   width: 15.5px;
+   height: 5.5px;
+   margin-left: 15px;  
+}
+
+.bottom-content {
+   border-top: 1px solid transparent; /* 투명한 상단 경계선 */
+   border-bottom: 1px solid transparent; /* 투명한 하단 경계선 */
+   border-image: linear-gradient(90deg, rgba(9, 54, 26, 0.1) 0%, #077D35 50%, rgba(9, 54, 26, 0.1) 100%);
+   border-image-slice: 1; /* 경계선 이미지를 잘라내기 위한 설정 */
+   height: 60px;
+   width: 100%;
+   margin: 0 auto;
+   bottom: 0%;
+}
+
+.bottom-content > p {
+   font-size: 18px;
+   font-weight: 500;
+   line-height: 60px;
+   width: 100%; /* p 태그가 부모 요소의 너비를 차지하도록 설정 */
+   text-align: center; /* 텍스트를 중앙 정렬 */
+   }
+
+
+
+
+ 
+   @media only screen and (max-width:1000px){
+      .hamburger{
+         display: block;
+         cursor: pointer;
+      }
+      .hamburger .line{
+         width: 30px;
+         height: 3px;
+         background: #fefefe;
+         margin: 6px 0;
+      }
+      .nav-bar{
+         position: absolute;
+         /* top: 80px; */
+         top: 80px;
+         /* left: -100%; */
+         right: 0;
+         width: 100vw;
+         /* height: 100vh; 모바일에서 메뉴바가 화면 전체로 보이고싶으면 */
+         height: 0;
+         background: #1a1a1a;
+         transition: all .2s;
+         overflow: hidden;
+      }
+      .nav-bar ul{
+         opacity: 0;
+         display: block;
+         width: fit-content;
+         /*width: 100%의 width는 부모의 너비의 요소를 따라가지만 fit-content는 부모의 너비요소를 따라가지 않고 개별적인 요소로 인식된다*/
+         margin: 80px auto 0 auto;
+         text-align: center;
+         transition: all .5s;
+      }
+      .nav-bar ul li a{
+         margin-bottom: 12px;
+      }
+      .nav-bar.active ul{
+         opacity: 1;
+      }
+      /* header end */
+   
+      /* sec01 */
+      /* .sec-01{
+         height: 800px;
+      }
+      .fluid{
+         height: 740px;
+      } */
+      .ro--1::after{
+         width: 350px;
+         left: 580px;
+      }
+      .ro--2{
+         display: none;
+      }
+      .ro--3{
+         display: none;
+      }
+      .top-content{
+         width: 510px;
+         margin: 0 auto;
+         display: flex;
+         flex-direction: column;
+         top: 70px;
+         left: 242.5px;
+         justify-content: center;
+      }
+      .top-title{
+         width: 100%;
+         text-align: center;
+      }
+      .main-car{
+         width: 100%;
+      }
+      .main-car img{ 
+         width: 500px;
+         margin-top: 50px;
+      }
+      .top-title>h2{
+         font-size: 42px;
+      }
+      .btn{
+         display: flex;
+         justify-content: center;
+      }
+      .sec-02{
+         display: none;
+      }
+   }
+   
+
+
+
+/* section02 */
+.sec-02{
+   /* width: 100%; */
+   height: 982px;
+   background: #1A1A1A;
+   padding: 120px 0;
+}
+
+.main_content_title{
+   width: 43%;
+   margin-top: 62px;
+}
+
+.main_content_title>p{
+   margin-bottom: 60px;
+}
+
+.main_content_title>h2{
+   margin-bottom: 30px;
+}
+
+.main_content_title>h3{
+   font-weight: 400;
+}
+
+.main_content_title span{
+   color: #0DE361;
+}
+
+.main_content{
+   width: 57%;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.main_content01{
+   display: flex;
+   gap: 0 30px;
+   position: relative;
+}
+
+.sec02__content01{
+   width: 378px;
+   height: 312px;
+   background: #CCFFE040;
+   border: 1px solid #0DE361;
+   border-radius: 5px 30px 30px 5px;
+}
+.sec02__content02{
+   width: 378px;
+   height: 400px;
+   background: #CCFFE040;
+   border: 1px solid #0DE361;
+   border-radius: 5px 30px 30px 5px;
+}
+.sec02_left{
+   position: absolute;
+   top: -88px;
+}
+.sec02_right{
+   position: absolute;
+   right: 0;
+}
+
+.sec02_icon{
+   width: 67px;
+   height: 67px;
+   margin-top: 50px;
+   margin-left: 50px;
+}
+
+.main_content span{
+   background-color: #0DE361;
+   color: #1A1A1A;
+   font-weight: 700;
+}
+
+
+.mt-62{
+   margin-top: 62px;
+}
+
+.mt-127{
+   margin-top: 127px;
+}
+
+.mt-97{
+   margin-top: 97px;
+}
+
+.mt-39{
+   margin-top: 39px;
+}
+.content_title{
+   width: 100%;
+   padding: 0 50px 50px 50px;
+}
+
+.content_title>h3{
+   line-height: 125%;
+}
+.content_title>p{
+   margin-top: 30px;
+   line-height: 125%;
+}
+
+/* .sec02_icon01{
+   background: url("../images/icon/sec02_content01_icon.svg") no-repeat;
+}
+.sec02_icon02{
+   background: url("../images/icon/sec02_content02_icon.svg");
+}
+.sec02_icon03{
+   background: url("../images/icon/sec02_content03_icon.svg");
+}
+.sec02_icon04{
+   background: url("../images/icon/sec02_content04_icon.svg");
+} */
+
+
+/* 여기부터 반응형입니다. */
+@media (max-width: 1280px) {
+   .top-content{
+      width: 832px;
+      height: 0 auto;
+   }
+
+   .ro--1::after{
+      width: 250px;
+      transform: rotate(-155deg);
+      left: -65px;
+   }
+   
+   .ro--2::after{
+      width: 180px;
+      transform: rotate(155deg);
+      left: 560px;
+   }
+   
+   .ro--3::after{
+      width: 100px;
+      transform: rotate(-155deg);
+      left: 1045px;
+   }
+
+   .top-title{
+      width: 500px;
+      top: 239px;
+      left: 150px;
+   }
+
+   .main-car img{ 
+      position: absolute;
+      z-index: 2;
+      width: 550px;
+      top: 394px;
+      left: 580px;
+   }
+   
+   .top-title>h2{
+      font-size: 50px;
+   }
+ }
+
+ @media (max-width: 1024px) {
+   .cars {
+     width: 503px;
+     right: 10%;
+   }
+   .main_top::after {
+     width: 46%;
+   }
+   .top_title {
+     font-size: 1.625rem;
+   }
+   .main_top h2 {
+     font-size: 3.25rem;
+   }
+ }
+ 
+ @media (max-width: 768px) {
+   .column-reverse {
+     flex-direction: column-reverse;
+   }
+   
+ }
+
+ @media (max-width: 548px) {
+   
+ }
+
+ @media (max-width: 348px) {
+   
+ }
+
+
+ 
+   /* sec01 */
+   .ro--1::after {
+      width: 350px;
+      left: 580px;
+   }
+
+   .ro--2 {
+      display: none;
+   }
+
+   .ro--3 {
+      display: none;
+   }
+
+   .top-content {
+      width: 510px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      top: 70px;
+      left: 242.5px;
+      justify-content: center;
+   }
+
+   .top-title {
+      width: 100%;
+      text-align: center;
+   }
+
+   .main-car {
+      width: 100%;
+      margin-top: 50px;
+   }
+
+   .main-car img {
+      width: 500px;
+   }
+
+   .top-title>h2 {
+      font-size: 42px;
+   }
+
+   .btn {
+      display: flex;
+      justify-content: center;
+   }
+
+   /* .sec-02{
+      display: none;
+   } */
+
+
+   @media only screen and (max-width:1000px) {
+      .hamburger {
+         display: block;
+         cursor: pointer;
+      }
+      .hamburger .line {
+         width: 30px;
+         height: 3px;
+         background: #fefefe;
+         margin: 6px 0;
+      }
+      .nav-bar {
+         position: absolute;
+         top: 80px;
+         right: 0;
+         width: 100%;
+         /* height: 100vh; 모바일에서 메뉴바가 화면 전체로 보이고싶으면 */
+         height: 0;
+         background: #1a1a1a;
+         transition: all .2s;
+         overflow: hidden;
+      }
+      .nav-bar ul {
+         opacity: 0;
+         display: block;
+         width: fit-content;
+         /*width: 100%의 width는 부모의 너비의 요소를 따라가지만 fit-content는 부모의 너비요소를 따라가지 않고 개별적인 요소로 인식된다*/
+         margin: 80px auto 0 auto;
+         text-align: center;
+         transition: all .5s;
+      }
+      .nav-bar ul li a {
+         margin-bottom: 12px;
+      }
+      .nav-bar.active ul {
+         opacity: 1;
+      }
+      /* header end */
+   
+      /* sec01 */
+      .ro--1::after {
+         width: 350px;
+         left: 580px;
+      }
+      .ro--2 {
+         display: none;
+      }
+      .ro--3 {
+         display: none;
+      }
+      .top-content {
+         width: 510px;
+         margin: 0 auto;
+         display: flex;
+         flex-direction: column;
+         top: 70px;
+         left: 242.5px;
+         justify-content: center;
+      }
+      .top-title {
+         width: 100%;
+         text-align: center;
+      }
+      .main-car {
+         width: 100%;
+         margin-top: 50px;
+      }
+      .main-car img {
+         width: 500px;
+      }
+      .top-title>h2 {
+         font-size: 42px;
+      }
+      .btn {
+         display: flex;
+         justify-content: center;
+      }
+   }
